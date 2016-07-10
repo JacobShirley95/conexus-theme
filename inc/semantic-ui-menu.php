@@ -11,7 +11,7 @@ class Semantic_UI_Menu_Walker extends Walker_Nav_Menu {
     }
 }
 
-function custom_theme_semantic_ui_menu($theme_location) {
+function conexus_theme_semantic_ui_menu($theme_location) {
 	$locations = get_nav_menu_locations();
 	$menu = get_term($locations[$theme_location], 'nav_menu');
 	$menu_items = wp_get_nav_menu_items($menu->term_id);

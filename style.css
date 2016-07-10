@@ -1,14 +1,14 @@
 /*
-Theme Name: Custom theme
-Theme URI: https://wordpress.org/themes/twentyfifteen/
+Theme Name: Conexus Theme
+Theme URI: 
 Author: Jacob Shirley
-Author URI: localhost
+Author URI: conexus.tech
 Description: My awesome theme.
 Version: 1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
-Text Domain: twentyfifteen
+Tags: responsive, simple, fast, basic, grid
+Text Domain: conexus
 GitHub Theme URI: https://github.com/JacobShirley95/conexus-theme
 GitHub Branch: master
 
@@ -207,6 +207,12 @@ body {
     .items>.item>.content{
     	text-align:center;
 	}
+}
+
+/* Footer menu */
+
+.menu-item {
+	display:inline;
 }
 
 /* Posts */

@@ -19,10 +19,6 @@
  *
  * For more information on hooks, actions, and filters,
  * {@link https://codex.wordpress.org/Plugin_API}
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 
 $FONTS = ["Work Sans", "Yantramanav"];
@@ -36,7 +32,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 660;
 }
 
-if ( ! function_exists( 'custom_theme_setup' ) ) :
+if ( ! function_exists( 'conexus_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -46,13 +42,13 @@ if ( ! function_exists( 'custom_theme_setup' ) ) :
  *
  * @since Twenty Fifteen 1.0
  */
-function custom_theme_setup() {
+function conexus_theme_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on custom_theme, use a find and replace
-	 * to change 'custom_theme' to the name of your theme in all the template files
+	 * If you're building a theme based on conexus_theme, use a find and replace
+	 * to change 'conexus_theme' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'custom-theme', get_template_directory() . '/languages' );
 
@@ -77,7 +73,7 @@ function custom_theme_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu'),
+		'primary' => __( 'Navigation Bar Menu'),
 		'social'  => __( 'Social Links Menu'),
 	) );
 
@@ -102,13 +98,13 @@ function custom_theme_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'css/editor-style.css', 'genericons/genericons.css', custom_theme_fonts_url() ) );
+	add_editor_style( array( 'css/editor-style.css', 'genericons/genericons.css', conexus_theme_fonts_url() ) );
 
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
-endif; // custom_theme_setup
-add_action( 'after_setup_theme', 'custom_theme_setup' );
+endif; // conexus_theme_setup
+add_action( 'after_setup_theme', 'conexus_theme_setup' );
 
 /**
  * Register widget area.
@@ -117,20 +113,20 @@ add_action( 'after_setup_theme', 'custom_theme_setup' );
  *
  * @link https://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function custom_theme_widgets_init() {
+function conexus_theme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Widget Area', 'custom_theme' ),
+		'name'          => __( 'Widget Area', 'conexus_theme' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'custom_theme' ),
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'conexus_theme' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'custom_theme_widgets_init' );
+add_action( 'widgets_init', 'conexus_theme_widgets_init' );
 
-if ( ! function_exists( 'custom_theme_fonts_url' ) ) :
+if ( ! function_exists( 'conexus_theme_fonts_url' ) ) :
 /**
  * Register Google fonts for Twenty Fifteen.
  *
@@ -138,13 +134,13 @@ if ( ! function_exists( 'custom_theme_fonts_url' ) ) :
  *
  * @return string Google fonts URL for the theme.
  */
-function custom_theme_fonts_url() {
+function conexus_theme_fonts_url() {
 	$fonts_url = '';
 	$subsets   = 'latin,latin-ext';
 
 	$fonts = $FONTS;
 
-	$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'custom_theme' );
+	$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'conexus_theme' );
 
 	if ( 'cyrillic' == $subset ) {
 		$subsets .= ',cyrillic,cyrillic-ext';
@@ -174,16 +170,16 @@ endif;
  *
  * @since Twenty Fifteen 1.1
  */
-function custom_theme_javascript_detection() {
+function conexus_theme_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'custom_theme_javascript_detection', 0 );
+add_action( 'wp_head', 'conexus_theme_javascript_detection', 0 );
 
 /**
  * Enqueue scripts and styles.
  */
-function custom_theme_scripts() {
-	wp_enqueue_style('my-theme-fonts', custom_theme_fonts_url());
+function conexus_theme_scripts() {
+	wp_enqueue_style('my-theme-fonts', conexus_theme_fonts_url());
 
 	wp_enqueue_style( 'my-theme-style', get_stylesheet_uri() );
 
@@ -201,7 +197,7 @@ function custom_theme_scripts() {
     wp_enqueue_script( 'semantic-ui', get_template_directory_uri() . '/vendor/semantic/dist/semantic.min.js', array(), '20151215', true );
 
     //Load my scripts
-    //
+    
     wp_enqueue_script( 'functions', get_template_directory_uri() . '/js/functions.js', array(), '20151215', true );
     
     wp_enqueue_script( 'responsive-script', get_template_directory_uri() . '/js/responsive-script.js', array(), '20151215', true );
@@ -210,27 +206,7 @@ function custom_theme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'custom_theme_scripts' );
-/**
- * Implement the Custom Header feature.
- *
- * @since Twenty Fifteen 1.0
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- *
- * @since Twenty Fifteen 1.0
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Customizer additions.
- *
- * @since Twenty Fifteen 1.0
- */
-require get_template_directory() . '/inc/customizer.php';
+add_action( 'wp_enqueue_scripts', 'conexus_theme_scripts' );
 
 /**
  * Load Semantic-UI menu generator.
@@ -243,21 +219,21 @@ include get_template_directory() . '/inc/semantic-ui-menu.php';
 include get_template_directory() . '/inc/semantic-ui-pagination.php';
 
 
-function custom_theme_nav_menu() {
-	custom_theme_semantic_ui_menu("primary");
+function conexus_theme_nav_menu() {
+	conexus_theme_semantic_ui_menu("primary");
 }
 
 // custom excerpt length
-function custom_theme_custom_excerpt_length( $length ) {
+function conexus_theme_custom_excerpt_length( $length ) {
    return 100;
 }
-add_filter( 'excerpt_length', 'custom_theme_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'conexus_theme_custom_excerpt_length', 999 );
 
 // add more link to excerpt
-function custom_theme_custom_excerpt_more($more) {
+function conexus_theme_custom_excerpt_more($more) {
    return '...';
 }
-add_filter('excerpt_more', 'custom_theme_custom_excerpt_more');
+add_filter('excerpt_more', 'conexus_theme_custom_excerpt_more');
 
 // custom excerpt length
 function excerpt($limit) {

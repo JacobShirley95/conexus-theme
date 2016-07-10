@@ -1,6 +1,6 @@
 <?php
 
-function custom_theme_paginate_links( $args = '' ) {
+function conexus_theme_paginate_links( $args = '' ) {
     global $wp_query, $wp_rewrite;
  
     // Setting up default values based on the current URL.
