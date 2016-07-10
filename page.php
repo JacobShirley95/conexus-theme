@@ -14,9 +14,7 @@ get_header(); ?>
 	</div>
 	<?php while ( have_posts() ) : the_post(); ?>
 	<div class="twelve wide column content-column">
-		<div class="ui container">
 		<?php get_template_part( 'content', 'page' ); ?>
-		</div>
 	</div>
 	<div class="two wide column side-panel">
 		<?php // If comments are open or we have at least one comment, load up the comment template.
