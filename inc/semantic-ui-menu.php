@@ -16,7 +16,7 @@ function custom_theme_semantic_ui_menu($theme_location) {
 	$menu = get_term($locations[$theme_location], 'nav_menu');
 	$menu_items = wp_get_nav_menu_items($menu->term_id);
 
-	$f = new NumberFormatter("en", NumberFormatter::SPELLOUT);
+	//$f = new NumberFormatter("en", NumberFormatter::SPELLOUT);
     //".$f->format(count($menu_items))." item
 	$args = array("theme_location" => $theme_location, "menu_class" => "ui large secondary pointing menu tabular tabs", "walker" => new Semantic_UI_Menu_Walker());
 
