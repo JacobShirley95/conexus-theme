@@ -12,7 +12,7 @@
 		</div>
 		<div class="twelve wide column responsive-column">
 			<?php 
-			$links = custom_theme_paginate_links(array(
+			$links = conexus_theme_paginate_links(array(
 					'prev_text'          => __( 'Prev'),
 					'next_text'          => __( 'Next' )
 				) ); 

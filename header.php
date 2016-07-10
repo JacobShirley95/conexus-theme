@@ -25,7 +25,7 @@
 			<!--<div class="title"><?php bloginfo('name'); ?></div>-->
 		</div>
 		<div class="twelve wide column responsive-column">
-			<?php custom_theme_nav_menu(); ?>
+			<?php conexus_theme_nav_menu(); ?>
 		</div>
 		<div class="two wide column side-panel"></div>
 	</div>
