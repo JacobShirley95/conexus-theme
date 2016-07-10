@@ -24,7 +24,7 @@
 		<div class="two wide column side-panel">
 			<!--<div class="title"><?php bloginfo('name'); ?></div>-->
 		</div>
-		<div class="twelve wide column responsive-column">
+		<div class="twelve wide column responsive-column nav-menu">
 			<?php conexus_theme_nav_menu(); ?>
 		</div>
 		<div class="two wide column side-panel"></div>

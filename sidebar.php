@@ -2,14 +2,12 @@
 /**
  * The sidebar containing the main widget area
  */
-
 get_search_form();
-
 
 if (is_single()) :
 ?>
 
-<div class="ui divided items">
+<div class="ui items">
 	<?php 
 	//'post__not_in' => array($post->ID)
 	$cats = [];

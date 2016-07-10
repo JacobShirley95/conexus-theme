@@ -169,7 +169,7 @@ body {
 }
 
 .side-panel {
-	background-color: rgba(245,245,245,1);
+	background-color: rgb(251,251,251);
 	word-break: break-word!important;
 	font-size: 120%;
 }
@@ -180,7 +180,7 @@ body {
 }
 
 .items>.item {
-	margin-bottom:0px!important;
+	margin-bottom:40px!important;
 }
 
 .items>.item>.content>.header {
@@ -207,6 +207,12 @@ body {
     .items>.item>.content{
     	text-align:center;
 	}
+}
+
+/* Nav menu */
+
+.nav-menu {
+	background-color: rgb(251,251,251);
 }
 
 /* Footer menu */
