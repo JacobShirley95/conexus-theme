@@ -171,7 +171,7 @@ body {
 .side-panel {
 	background-color: rgb(251,251,251);
 	word-break: break-word!important;
-	font-size: 120%;
+	font-size: 110%;
 }
 
 .ui.comments {
@@ -183,8 +183,12 @@ body {
 	margin-bottom:40px!important;
 }
 
+.side-panel>.items>.item {
+	margin-bottom:30px!important;
+}
+
 .items>.item>.content>.header {
-	width: 100%;
+	width: 105%;
 }
 
 .items>.item>.content>.description {
