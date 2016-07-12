@@ -23,20 +23,4 @@ $(function() {
 
 	resize();
 	$(window).resize(resize);
-
-	var $responsiveColumns = $('.responsive-column');
-
-	enquire.register("screen and (max-width: 700px)", {
-	    match: function() {
-	    	$(".side-panel").hide();
-	        $responsiveColumns.removeClass("twelve wide");
-	        $responsiveColumns.addClass("sixteen wide");
-	    },
-
-	    unmatch: function() {
-	    	$(".side-panel").show();
-	        $responsiveColumns.removeClass("sixteen wide");
-	        $responsiveColumns.addClass("twelve wide");
-	    }
-	});
 });

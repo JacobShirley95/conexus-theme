@@ -15,22 +15,7 @@ if ( post_password_required() ) {
 	return;
 }
 
-function mytheme_comment($comment, $args, $depth) {
-	$GLOBALS['comment'] = $comment; ?>
-	<div class="comment">
-		<div class="content">
-			<a class="author"><?php comment_author();?></a>
-			<div class="metadata">
-				<span class="date"><?php comment_time();?></span>
-			</div>
-			<div class="text"><?php comment_text();?></div>
-			<div class="actions">
-				<?php comment_reply_link(); ?>
-				<?php edit_comment_link(__('Edit')); ?>
-			</div>
-		</div>
-	</div>
-<?php } ?>
+?>
 
 <div class="ui comments">
 	<?php wp_list_comments('callback=mytheme_comment');?>

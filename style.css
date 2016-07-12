@@ -80,7 +80,6 @@ section {
 
 ol,
 ul {
-	list-style: none;
 }
 
 table {
@@ -203,10 +202,18 @@ body {
 	margin-right:10px;
 }
 
+.page-header {
+	color:black;
+}
+
+.responsive-toggle {
+	display:none;
+}
+
 @media only screen and (max-width: 700px) {
-    /*.side-panel {
+    .side-panel {
     	display:none!important;
-    }*/
+    }
 
     .items>.item>.content{
     	text-align:center;
@@ -230,6 +237,7 @@ body {
 img.alignright {float:right; margin:1em 0 1em 1em}
 img.alignleft {float:left; margin:1em 1em 1em 0}
 img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+img.size-full {width:100%}
 a img.alignright {float:right; margin:0 0 1em 1em}
 a img.alignleft {float:left; margin:0 1em 1em 0}
 a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
@@ -248,5 +256,8 @@ blockquote {
 	word-break: break-word;
 }
 
-.entry-content>h1{
+.entry-content>ol,
+.entry-content>ul {
+	padding: 0 40px 0 60px;
 }
+

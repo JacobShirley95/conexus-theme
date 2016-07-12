@@ -6,11 +6,19 @@
  */
 ?>
 
-	<div class="row">
+	<div class="row footer">
 		<div class="two wide column side-panel">
 			<a class="ui sub header" href="<?php echo esc_url(__('https://wordpress.org/')); ?>"><?php printf(__( 'Powered by %s'), 'WordPress' ); ?></a>
 		</div>
 		<div class="twelve wide column responsive-column">
+			<div class="responsive-toggle hidden">
+				<?php
+					echo "<div class='ui dividing header'>Comments</div>";
+					comments_template();
+					echo "<div class='ui dividing header'>Related posts</div>";
+					get_template_part('sidebar');
+				?>
+			</div>
 			<?php 
 			$links = conexus_theme_paginate_links(array(
 					'prev_text'          => __( 'Prev'),
@@ -23,11 +31,9 @@
 			<?php endif; ?>
 		</div>
 		<div class="two wide column side-panel">
-			<!--<a class="affil-link" href="https://github.com/JacobShirley95"><img width="32px" height="32px" src="http://cdn.airve.com/icon/github/GitHub-Mark-32px.png"></img></a>
-			<a class="affil-link" href="https://jsfiddle.net/user/Auferious/fiddles/"><img width="32px" height="32px" src="http://doc.jsfiddle.net/_downloads/jsfiddle-logo.png"></img></a>-->
-			<?php 
+			<?php
 				$args = array("theme_location" => "social");
-				wp_nav_menu($args); 
+				wp_nav_menu($args);
 			?>
 		</div>
 	</div>
