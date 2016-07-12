@@ -21,12 +21,12 @@
 <body <?php body_class(); ?>>
 <div id="main" class="ui internally celled grid">
 	<div class="row">
-		<div class="two wide column side-panel">
+		<div class="two wide column side-panel secondary-area">
 			<!--<div class="title"><?php bloginfo('name'); ?></div>-->
 		</div>
-		<div class="twelve wide column responsive-column nav-menu">
+		<div class="twelve wide column responsive-column secondary-area">
 			<?php conexus_theme_nav_menu(); ?>
 		</div>
-		<div class="two wide column side-panel"></div>
+		<div class="two wide column side-panel secondary-area"></div>
 	</div>
 

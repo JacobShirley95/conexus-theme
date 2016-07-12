@@ -5,7 +5,7 @@
 
 get_header(); ?>
 <div class="row">
-	<div class="two wide column side-panel">
+	<div class="two wide column side-panel secondary-area">
 		<?php get_sidebar(); ?>
 	</div>
 	<div class="twelve wide column content-column responsive-column">
@@ -20,7 +20,7 @@ get_header(); ?>
 		</div>
 		<?php endwhile;?>
 	</div>
-	<div class="two wide column side-panel">
+	<div class="two wide column side-panel secondary-area">
 		<?php comments_template();?>
 	</div>
 </div>

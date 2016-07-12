@@ -10,13 +10,13 @@
 get_header(); ?>
 
 <div class="row">
-	<div class="two wide column side-panel">
+	<div class="two wide column side-panel secondary-area">
 	</div>
 	<?php while ( have_posts() ) : the_post(); ?>
-	<div class="twelve wide column content-column">
+	<div class="twelve wide column content-column responsive-column">
 		<?php get_template_part( 'content', 'page' ); ?>
 	</div>
-	<div class="two wide column side-panel">
+	<div class="two wide column side-panel secondary-area">
 		<?php // If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
