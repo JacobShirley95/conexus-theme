@@ -31,7 +31,8 @@
 						comments_template();
 						echo "<div class='ui dividing header'>Related posts</div>";
 					} else {
-						echo "<div class='ui divider'></div>";
+						if ($links)
+							echo "<div class='ui divider'></div>";
 					}
 					get_template_part('sidebar');
 				?>
