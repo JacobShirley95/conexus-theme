@@ -20,6 +20,7 @@
 
 			<div class="ui secondary menu">
 				<?php echo $links; ?>
+
 			</div>
 			
 			<?php endif; ?>
