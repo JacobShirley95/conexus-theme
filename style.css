@@ -31,7 +31,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
  */
 
-html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, address, big, cite, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, address, big, cite, del, dfn, font, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	font-family: inherit;
 	font-size: 100%;
@@ -151,8 +151,26 @@ body {
 }
 
 .nav-menu {
-	font-size: 150%!important;
+	font-family: 'Exo', sans-serif;
+	font-size: 200%!important;
 	border-bottom:none!important;
+}
+
+.nav-menu>.item {
+	z-index:50;
+}
+
+.nav-menu>.item:not(.active) {
+	font-size: 80%!important;
+}
+
+.row:first-of-type>.column {
+	box-shadow:none!important;
+	padding:2px!important;
+}
+
+.row:last-of-type>.column {
+	box-shadow:none!important;
 }
 
 .title {
@@ -231,6 +249,10 @@ body {
 
     .items>.item>.content{
     	text-align:center;
+	}
+
+	.nav-menu {
+		font-size: 130%!important;
 	}
 }
 

@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <div class="row">
-	<div class="two wide column side-panel">
+	<div class="two wide column side-panel secondary-area">
 		<?php echo get_search_form(); ?>
 	</div>
 	<div class="twelve wide column content-column responsive-column">
@@ -47,7 +47,7 @@ get_header(); ?>
 		?>
 		</div>
 	</div>
-	<div class="two wide column side-panel"></div>
+	<div class="two wide column side-panel secondary-area"></div>
 </div>
 
 <?php get_footer(); ?>

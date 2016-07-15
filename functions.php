@@ -21,6 +21,9 @@
  * {@link https://codex.wordpress.org/Plugin_API}
  */
 
+$SIDEBAR_WIDTH = "two";
+$CONTENT_WIDTH = "twelve";
+
 $FONTS = ["Work Sans", "Yantramanav"];
 
 /**
