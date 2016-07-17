@@ -8,14 +8,14 @@ function resize() {
 	var contentHeight = $(".content-column").height();
 	var mainHeight = $("#main").height();
 
-	//console.log(initialHeight+", "+docHeight+", "+windowHeight+", "+mainHeight);
+	console.log(initialHeight+", "+docHeight+", "+windowHeight+", "+mainHeight);
 
-	if (initialHeight < windowHeight || mainHeight < windowHeight) {
+	if ((initialHeight < windowHeight || mainHeight < windowHeight)) {
 		$(".content-column").height(contentHeight+(windowHeight-mainHeight));
 	} else {
 		initialHeight = $("#main").height();
+		//$(".content-column").css("height", "auto");
 	}
-
 }
 
 $(function() {
@@ -23,4 +23,16 @@ $(function() {
 
 	resize();
 	$(window).resize(resize);
+
+	var baseOffset = $("#header").height()+parseInt($("html").css("margin-top"));
+
+	$('.ui.sticky').each(function() {
+		var $this = $(this);
+		var offset = $this.offset().top;
+
+		console.log(offset);
+		$this.sticky({
+			offset: offset
+		});
+	})
 });

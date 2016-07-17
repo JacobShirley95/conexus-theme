@@ -18,7 +18,7 @@
 				) ); 
 			if ($links) : ?>
 
-			<div class="ui secondary massive menu">
+			<div class="ui secondary massive menu" style="margin: 0;">
 				<?php echo $links; ?>
 			</div>
 			

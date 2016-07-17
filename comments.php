@@ -40,7 +40,7 @@ if ( post_password_required() ) {
 	    ''
 	);
 
-	$args = ['fields' => apply_filters( 'comment_form_default_fields', $fields ), 'class_submit' => "ui primary button", 'class_form' => "ui form",
+	$args = ['fields' => apply_filters( 'comment_form_default_fields', $fields ), 'class_submit' => "ui primary fluid button", 'class_form' => "ui form",
 			 'comment_field' =>  '<div class="field"><label>' . _x( 'Comment', 'noun' ) .
     							 '</label><textarea name="comment" rows="3"></textarea></div>','title_reply' => __( 'Share your thoughts!' ),];
 

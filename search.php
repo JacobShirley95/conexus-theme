@@ -7,7 +7,9 @@ get_header(); ?>
 
 <div class="row">
 	<div class="two wide column side-panel secondary-area">
-		<?php echo get_search_form(); ?>
+		<div class="ui sticky">
+			<?php get_sidebar(); ?>
+		</div>
 	</div>
 	<div class="twelve wide column content-column responsive-column">
 		<div class="ui items">
@@ -47,7 +49,10 @@ get_header(); ?>
 		?>
 		</div>
 	</div>
-	<div class="two wide column side-panel secondary-area"></div>
+	<div class="two wide column side-panel secondary-area">
+		<div class="ui sticky">
+		</div>
+	</div>
 </div>
 
 <?php get_footer(); ?>

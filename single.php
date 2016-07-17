@@ -6,7 +6,9 @@
 get_header(); ?>
 <div class="row">
 	<div class="two wide column side-panel secondary-area">
+		<div class="ui sticky">
 		<?php get_sidebar(); ?>
+		</div>
 	</div>
 	<div class="twelve wide column content-column responsive-column">
 		<?php while (have_posts()) : the_post(); ?>
@@ -21,7 +23,9 @@ get_header(); ?>
 		<?php endwhile;?>
 	</div>
 	<div class="two wide column side-panel secondary-area">
-		<?php comments_template();?>
+		<div class="ui sticky">
+			<?php comments_template();?>
+		</div>
 	</div>
 </div>
 
