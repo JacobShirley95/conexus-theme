@@ -251,10 +251,12 @@ function excerpt($limit) {
   return $excerpt;
 }
 
-function mytheme_comment($comment, $args, $depth) {
+function conexus_theme_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
 	<div class="comment">
+		<a class="avatar"><div class="ui circular image"><?php echo get_avatar($comment); ?></div></a>
 		<div class="content">
+			
 			<a class="author"><?php comment_author();?></a>
 			<div class="metadata">
 				<span class="date"><?php comment_time();?></span>

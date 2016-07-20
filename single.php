@@ -14,6 +14,7 @@ get_header(); ?>
 		<?php while (have_posts()) : the_post(); ?>
 		<div class="post-header">
 			<h1 class="ui header"><?php the_title();?></h1>
+
 			<div class="ui left floated sub header blue"><?php the_author(); ?></div>
 			<a href="<?php echo get_day_link('', '', ''); ?>"><div class="ui right floated sub header blue"><?php the_time('F jS, Y'); ?></div></a>
 		</div>

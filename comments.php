@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 ?>
 
 <div class="ui comments">
-	<?php wp_list_comments('callback=mytheme_comment');?>
+	<?php wp_list_comments('callback=conexus_theme_comment');?>
 </div>
 
 <?php if (get_comments_number() > 0) echo "<div class='ui divider'></div>"; ?>

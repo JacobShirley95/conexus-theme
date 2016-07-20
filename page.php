@@ -15,10 +15,12 @@ get_header(); ?>
 			<?php get_sidebar(); ?>
 		</div>
 	</div>
-	<?php while ( have_posts() ) : the_post(); ?>
 	<div class="twelve wide column content-column responsive-column">
-		<?php get_template_part( 'content', 'page' ); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content', 'page' ); ?>
+		<?php endwhile; ?>
 	</div>
+	
 	<div class="two wide column side-panel secondary-area">
 		<div class="ui sticky">
 			<?php // If comments are open or we have at least one comment, load up the comment template.
@@ -28,7 +30,6 @@ get_header(); ?>
 			?>
 		</div>
 	</div>
-	<?php endwhile; ?>
 </div>
 
 <?php get_footer(); ?>

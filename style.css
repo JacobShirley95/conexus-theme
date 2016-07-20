@@ -141,8 +141,6 @@ html {
 body {
 	background: white;
 	height: auto!important;
-	display:flex;
-	flex-direction: column;
 }
 
 .primary-area {
@@ -164,7 +162,6 @@ body {
 
 #main {
 	padding-top:84px;
-	flex: 0 0 auto;
 }
 
 .nav-menu {
@@ -270,9 +267,21 @@ body {
 	.nav-menu {
 		font-size: 130%!important;
 	}
+
+	#header {
+		position:initial;
+	}
+
+	#main {
+		padding-top:0px;
+	}
 }
 
 /* Footer menu */
+
+.menu {
+	list-style: none;
+}
 
 .menu-item {
 	display:inline;
