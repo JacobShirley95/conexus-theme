@@ -30,9 +30,16 @@ $(function() {
 		var $this = $(this);
 		var offset = $this.offset().top;
 
-		console.log(offset);
+		console.log("SDFSD: "+offset);
+
 		$this.sticky({
 			offset: offset
 		});
-	})
+	});
+
+	$(".item:not(.active)").hover(function() {
+		$(this).addClass("active");
+	}, function() {
+		$(this).removeClass("active");
+	});
 });

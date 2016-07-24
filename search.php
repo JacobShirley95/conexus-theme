@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <div class="row">
-	<div class="two wide column side-panel secondary-area">
+	<div class="<?php left_sidebar_classes(); ?>">
 		<div class="ui sticky">
 			<?php get_sidebar(); ?>
 		</div>

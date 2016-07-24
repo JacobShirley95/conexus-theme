@@ -21,8 +21,17 @@
  * {@link https://codex.wordpress.org/Plugin_API}
  */
 
-$SIDEBAR_WIDTH = "two";
-$CONTENT_WIDTH = "twelve";
+function left_sidebar_classes($secondary=true) {
+	echo "two wide column side-panel ".($secondary ? "secondary-area" : "");
+}
+
+function right_sidebar_classes($secondary=true) {
+	echo "two wide column side-panel ".($secondary ? "secondary-area" : "");
+}
+
+function content_classes($main=false) {
+	echo "twelve wide column ".($main ? "content-column" : "")." responsive-column";
+}
 
 $FONTS = ["Work Sans", "Yantramanav"];
 
@@ -182,13 +191,13 @@ add_action( 'wp_head', 'conexus_theme_javascript_detection', 0 );
  * Enqueue scripts and styles.
  */
 function conexus_theme_scripts() {
-	wp_enqueue_style('my-theme-fonts', conexus_theme_fonts_url());
+	wp_enqueue_style('conexus-theme-fonts', conexus_theme_fonts_url());
 
-	wp_enqueue_style( 'my-theme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'conexus-theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'my-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'conexus-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'my-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'conexus-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
     //Load vendor scripts
     

@@ -178,6 +178,10 @@ body {
 	font-size: 80%!important;
 }
 
+.nav-menu>.item.active {
+	
+}
+
 #header>.grid>.row>.column {
 	padding:2px!important;
 }
@@ -279,7 +283,7 @@ body {
 
 /* Footer menu */
 
-.menu {
+.menu, .menu>ul, .menu>ol {
 	list-style: none;
 }
 
@@ -309,6 +313,10 @@ blockquote {
 
 .entry-content {
 	word-break: break-word;
+}
+
+.entry-content>p {
+	margin:1em 0 1em;
 }
 
 .entry-content>ol,

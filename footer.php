@@ -7,10 +7,10 @@
 ?>
 
 	<div class="row footer">
-		<div class="two wide column side-panel">
+		<div class="<?php left_sidebar_classes(false); ?>">
 			<a class="ui sub header" href="<?php echo esc_url(__('https://wordpress.org/')); ?>"><?php printf(__( 'Powered by %s'), 'WordPress' ); ?></a>
 		</div>
-		<div class="twelve wide column responsive-column">
+		<div class="<?php content_classes(); ?>">
 			<?php 
 			$links = conexus_theme_paginate_links(array(
 					'prev_text'          => __( 'Prev'),
@@ -39,7 +39,7 @@
 			</div>
 			
 		</div>
-		<div class="two wide column side-panel">
+		<div class="<?php right_sidebar_classes(false); ?>">
 			<?php
 				$args = array("theme_location" => "social");
 				wp_nav_menu($args);
