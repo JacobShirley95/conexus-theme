@@ -1,17 +1,23 @@
 $(function() {
-	var $responsiveColumns = $('.responsive-column');
+	var $responsiveColumns = $(".responsive-column");
+	var $responsiveToggles = $(".responsive-toggle");
+	var $footer = $("#footer");
 
-	enquire.register("screen and (max-width: 700px)", {
+	enquire.register("screen and (max-width: 1000px)", {
 	    match: function() {
-	    	$(".responsive-toggle").show();
-	    	$(".footer").addClass("secondary-area");
+	    	$footer.addClass("secondary-area");
+
+	    	$responsiveToggles.show();
+
 	        $responsiveColumns.removeClass("twelve wide");
 	        $responsiveColumns.addClass("sixteen wide");
 	    },
 
 	    unmatch: function() {
-	    	$(".responsive-toggle").hide();
-	    	$(".footer").removeClass("secondary-area");
+	    	$footer.removeClass("secondary-area");
+
+	    	$responsiveToggles.hide();
+
 	        $responsiveColumns.removeClass("sixteen wide");
 	        $responsiveColumns.addClass("twelve wide");
 	    }

@@ -132,7 +132,7 @@ a img {
 
 html {
 	font-size: 100%;
-	height: auto!important;
+	#height: auto!important;
 	overflow: auto;
 	overflow-x: initial!important;
 	overflow-y: initial!important;
@@ -140,7 +140,9 @@ html {
 
 body {
 	background: white;
-	height: auto!important;
+	#height: auto!important;
+	display:flex;
+	flex-direction:column;
 }
 
 .primary-area {
@@ -158,10 +160,19 @@ body {
 	background-color:white;
 	width:100%;
 	box-shadow: 0 1px 0 0 #D4D4D5;
+	flex: 0 0 auto;
 }
 
 #main {
 	padding-top:84px;
+	display:flex;
+	flex: 1 0 auto;
+}
+
+#footer {
+	flex: 0 0 auto;
+	z-index:5000;
+	box-shadow: 0 0 0 1px #D4D4D5;
 }
 
 .nav-menu {
@@ -186,7 +197,7 @@ body {
 	padding:2px!important;
 }
 
-.row:last-of-type>.column {
+.grid-panel>.row>.column {
 	box-shadow:none!important;
 }
 
@@ -256,10 +267,9 @@ body {
 
 .responsive-toggle {
 	display:none;
-	background-color: rgb(251,251,251);
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
     .side-panel {
     	display:none!important;
     }
