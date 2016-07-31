@@ -9,7 +9,7 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class(["item"]); ?>>
 	<div class="content">
 		<a class="header" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-		<a class="ui sub header" href="<?php echo get_day_link('', '', ''); ?>"><?php the_time('F jS, Y'); ?></a>
+		<a class="ui sub header" href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><?php the_time('F jS, Y'); ?></a>
 		<div class="description">
 			<?php the_excerpt(__("Read more"));?>
 		</div>

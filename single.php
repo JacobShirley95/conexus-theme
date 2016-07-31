@@ -17,7 +17,7 @@ get_header(); ?>
 			<h1 class="ui header"><?php the_title();?></h1>
 
 			<div class="ui left floated sub header blue"><?php the_author(); ?></div>
-			<a href="<?php echo get_day_link('', '', ''); ?>"><div class="ui right floated sub header blue"><?php the_time('F jS, Y'); ?></div></a>
+			<a href="<?php echo get_day_link(get_the_time('Y'), get_the_time('m'), get_the_time('d')); ?>"><div class="ui right floated sub header blue"><?php the_time('F jS, Y'); ?></div></a>
 		</div>
 		<div class="entry-content">
 			<p><?php the_content(); ?></p>
