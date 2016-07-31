@@ -26,7 +26,7 @@ get_header(); ?>
 	</div>
 	<div class="two wide column side-panel secondary-area">
 		<div class="ui sticky">
-			<?php //comments_template();?>
+			<?php comments_template();?>
 		</div>
 	</div>
 </div>
