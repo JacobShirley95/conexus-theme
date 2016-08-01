@@ -205,6 +205,8 @@ function conexus_theme_scripts() {
 
     wp_enqueue_script( 'enquire', get_template_directory_uri() . '/vendor/enquire/dist/enquire.min.js', array(), '20151215', true );
 
+    wp_enqueue_script( 'platform', get_template_directory_uri() . '/vendor/platform.js/platform.js', array(), '20151215', true );
+
     wp_enqueue_style( 'semantic-ui-style', get_template_directory_uri() . '/vendor/semantic/dist/semantic.min.css');
     wp_enqueue_script( 'semantic-ui', get_template_directory_uri() . '/vendor/semantic/dist/semantic.min.js', array(), '20151215', true );
 
