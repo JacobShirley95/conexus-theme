@@ -43,7 +43,7 @@ $(function() {
 	    },
 
 	    unmatch: function() {
-	    	$header.css({top: 0});
+	    	$header.css({top: "initial"});
 	    	$footer.removeClass("secondary-area");
 
 	    	$responsiveToggles.hide();
