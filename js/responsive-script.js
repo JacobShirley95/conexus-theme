@@ -17,28 +17,28 @@ $(function() {
 
 	        var scrollSpeed = 0;
 	        var lastScrollY = $(document).scrollTop();
-	        var moving = false;
 
 	        var height = $header.outerHeight();
+	        var startPos = parseInt($header.css("top"));
 	        var pos = 0;
 
 	        interval = setInterval(function() {
 	        	var sc = $(document).scrollTop();
+	        	if (sc != lastScrollY) {
+		        	scrollSpeed = sc-lastScrollY;
+		        	lastScrollY = sc;
 
-	        	scrollSpeed = sc-lastScrollY;
-	        	lastScrollY = sc;
+		        	pos = parseInt($header.css("top"));
 
-	        	pos = parseInt($header.css("top"));
-
-	        	if (!moving && pos >= -height && pos <= 0) {
-	        		//moving = true;
-	        		if (pos - scrollSpeed < -height) {
-	        			scrollSpeed = pos+height;
-	        		} else if (pos - scrollSpeed > 0) {
-	        			scrollSpeed = pos;
-	        		}
-	        		$header.css({top: "-="+scrollSpeed});
-	        	}
+		        	if (pos >= startPos-height && pos <= startPos) {
+		        		if (pos - scrollSpeed < startPos-height) {
+		        			scrollSpeed = pos - startPos + height;
+		        		} else if (pos - scrollSpeed > startPos) {
+		        			scrollSpeed = pos - startPos;
+		        		}
+		        		$header.css({top: "-="+scrollSpeed});
+		        	}
+		        }
 	        }, 5);
 	    },
 
