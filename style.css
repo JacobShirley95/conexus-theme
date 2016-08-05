@@ -156,7 +156,7 @@ body {
 
 #header {
 	position:fixed;
-	z-index:5000;
+	z-index:500000;
 	background-color:white;
 	width:100%;
 	box-shadow: 0 1px 0 0 #D4D4D5;
@@ -284,10 +284,11 @@ body {
 
 	#header {
 		#position:initial;
+
 	}
 
 	#main {
-		padding-top:0px;
+		padding-top:50px;
 	}
 }
 

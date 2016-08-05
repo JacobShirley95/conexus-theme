@@ -20,25 +20,39 @@ $(function() {
 
 	        var height = $header.outerHeight();
 	        var startPos = parseInt($header.css("top"));
+	        var startPos2 = startPos;
+	        var offset = 46;
+
 	        var pos = 0;
 
 	        interval = setInterval(function() {
 	        	var sc = $(document).scrollTop();
-	        	if (sc != lastScrollY) {
+	        	//if (sc != lastScrollY) {
 		        	scrollSpeed = sc-lastScrollY;
-		        	lastScrollY = sc;
 
 		        	pos = parseInt($header.css("top"));
 
 		        	if (pos >= startPos-height && pos <= startPos) {
+		        		if (sc > offset) {
+				        	startPos = 0;
+				        } else
+				        	startPos = startPos2;
+
 		        		if (pos - scrollSpeed < startPos-height) {
 		        			scrollSpeed = pos - startPos + height;
 		        		} else if (pos - scrollSpeed > startPos) {
 		        			scrollSpeed = pos - startPos;
 		        		}
+
+		        		console.log(scrollSpeed);
+
 		        		$header.css({top: "-="+scrollSpeed});
-		        	}
-		        }
+			        }
+
+			        
+
+			        lastScrollY = sc;
+		       // }
 	        }, 5);
 	    },
 
