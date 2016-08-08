@@ -12,7 +12,7 @@ MobileMenu.prototype.init = function() {
     var height = this.$menu.outerHeight();
     var startPos = parseInt(this.$menu.css("top"));
     var startPos2 = startPos;
-    
+
     var pos = 0;
 
     var _this = this;
@@ -96,8 +96,10 @@ $(function() {
 	        $responsiveColumns.removeClass("sixteen wide");
 	        $responsiveColumns.addClass("twelve wide");
 
-	        if (mobileMenu != null)
+	        if (mobileMenu != null) {
 	        	mobileMenu.stop();
+	        	mobileMenu = null;
+	        }
 	    }
 	});
 
