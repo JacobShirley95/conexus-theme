@@ -232,6 +232,24 @@ include get_template_directory() . '/inc/semantic-ui-menu.php';
  */
 include get_template_directory() . '/inc/semantic-ui-pagination.php';
 
+add_action('init','random_post');
+function random_post() {
+       global $wp;
+       $wp->add_query_var('random');
+       add_rewrite_rule('random/?$', 'index.php?random=1', 'top');
+}
+ 
+add_action('template_redirect','random_template');
+function random_template() {
+       if (get_query_var('random') == 1) {
+               $posts = get_posts('post_type=post&orderby=rand&numberposts=1');
+               foreach($posts as $post) {
+                       $link = get_permalink($post);
+               }
+               wp_redirect($link,307);
+               exit;
+       }
+}
 
 function conexus_theme_nav_menu() {
 	conexus_theme_semantic_ui_menu("primary");

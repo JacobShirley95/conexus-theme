@@ -1,3 +1,5 @@
+<a class="ui button fluid" href="index.php?random=1">Shuffle</a>
+<br>
 <?php
 /**
  * The sidebar containing the main widget area
