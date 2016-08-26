@@ -31,7 +31,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
  */
 
-html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, address, big, cite, del, dfn, font, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+html, body, div, span, applet, object, iframe, pre, a, abbr, acronym, address, big, cite, del, dfn, font, ins, kbd, q, s, samp, small, strike, ol, ul, sub, sup, tt, var, dl, dt, dd, li, fieldset, form, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	font-family: inherit;
 	font-size: 100%;
@@ -59,6 +59,10 @@ html {
 	-webkit-box-sizing: inherit;
 	-moz-box-sizing: inherit;
 	box-sizing: inherit;
+}
+
+ol, ul {
+	list-style: none; 
 }
 
 body {
@@ -334,15 +338,16 @@ blockquote {
 	margin:1em 0 1em;
 }
 
-.entry-content>ol,
-.entry-content>ul {
-	padding: 0 40px 0 60px;
+.entry-content ol,
+.entry-content ul {
+	list-style:initial;
+    padding: 5px 0 5px 40px;
 }
 
 /* Widgets */
 
 .widget {list-style: none; }
 
-.widget-area.left {
+.widget {
 	margin: 1rem 0;
 }
