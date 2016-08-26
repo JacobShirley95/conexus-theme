@@ -67,6 +67,7 @@ get_header(); ?>
 	</div>
 	<div class="<?php right_sidebar_classes(); ?>">
 		<div class="ui sticky">
+			<?php get_sidebar("right"); ?>
 		</div>
 	</div>
 </div>

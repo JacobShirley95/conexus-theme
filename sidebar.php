@@ -4,6 +4,7 @@
 /**
  * The sidebar containing the main widget area
  */
+
 get_search_form();
 
 if (is_single()) :
@@ -41,7 +42,11 @@ if (is_single()) :
 
 <?php else : ?>
 <div class="ui basic segment">
-	<?php wp_tag_cloud(); ?>
+	<?php if ( is_active_sidebar( 'left_sidebar' ) ) : ?>
+		<div class="widget-area" role="complementary">
+			<?php dynamic_sidebar( 'left_sidebar' ); ?>
+		</div><!-- #primary-sidebar -->
+	<?php endif; ?>
 </div>
 <?php endif; ?>
 

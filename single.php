@@ -27,6 +27,7 @@ get_header(); ?>
 	<div class="two wide column side-panel secondary-area">
 		<div class="ui sticky">
 			<?php comments_template();?>
+			<?php get_sidebar("right");?>
 		</div>
 	</div>
 </div>
