@@ -41,12 +41,12 @@ if (is_single()) :
 </div>
 
 <?php else : ?>
-<div class="ui basic segment">
+<!--<div class="ui basic segment">-->
 	<?php if ( is_active_sidebar( 'left_sidebar' ) ) : ?>
-		<div class="widget-area" role="complementary">
+		<div class="widget-area left" role="complementary">
 			<?php dynamic_sidebar( 'left_sidebar' ); ?>
-		</div><!-- #primary-sidebar -->
+		</div>
 	<?php endif; ?>
-</div>
+<!--</div>-->
 <?php endif; ?>
 

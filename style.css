@@ -342,3 +342,7 @@ blockquote {
 /* Widgets */
 
 .widget {list-style: none; }
+
+.widget-area.left {
+	margin: 1rem 0;
+}
